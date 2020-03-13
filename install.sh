@@ -15,6 +15,8 @@ pacman -Syy
 pacstrap /mnt base linux linux-firmware base-devel
 genfstab -U /mnt >> /mnt/etc/fstab
 
+cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
+
 wget https://raw.githubusercontent.com/enryson/scriptArch/master/installChroot.sh
 cp installChroot.sh /mnt
 chmod +x ./installChroot.sh
