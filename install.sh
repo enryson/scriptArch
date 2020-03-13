@@ -18,4 +18,4 @@ genfstab -U /mnt >> /mnt/etc/fstab
 wget https://raw.githubusercontent.com/enryson/scriptArch/master/installChroot.sh
 cp installChroot.sh /mnt
 chmod +x ./installChroot.sh
-arch-chroot /mnt /installChroot.sh
+arch-chroot /mnt installChroot.sh
