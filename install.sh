@@ -15,6 +15,7 @@ pacman -Syy
 pacstrap /mnt base linux linux-firmware base-devel
 genfstab -U /mnt >> /mnt/etc/fstab
 
-cp installChroot.sh
+wget https://raw.githubusercontent.com/enryson/scriptArch/master/installChroot.sh
+cp installChroot.sh /mnt
 
 arch-chroot /mnt ./installChroot.sh
