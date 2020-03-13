@@ -6,7 +6,7 @@ mkfs.fat -F32 /dev/sda1
 mount /dev/sda3 /mnt
 
 pacman -Syy
-pacman -S reflector 
+pacman -S reflector --noconfirm
 reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Syy
 
@@ -15,7 +15,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
 pacman -Syy
-pacman -S reflector 
+pacman -S reflector --noconfirm
 reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
@@ -35,6 +35,6 @@ mount /dev/sda1 /mnt/boot/EFI
 grub-install --target=x86_64-efi  --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S dhcpcd
+pacman -S dhcpcd --noconfirm
 systemctl start dhcpcd
 systemctl enable dhcpcd
