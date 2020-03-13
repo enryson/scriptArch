@@ -22,3 +22,5 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S dhcpcd --noconfirm
 systemctl start dhcpcd
 systemctl enable dhcpcd
+
+pacman -S git
