@@ -5,6 +5,9 @@ mkswap /dev/sda2
 swapon /dev/sda2
 mkfs.fat -F32 /dev/sda1
 
+mkdir /mnt/boot/EFI
+mount /dev/sda1 /mnt/boot/EFI
+
 mount /dev/sda3 /mnt
 
 pacman -Syy
@@ -19,5 +22,5 @@ cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 
 wget https://raw.githubusercontent.com/enryson/scriptArch/master/installChroot.sh
 cp installChroot.sh /mnt
-chmod +x ./installChroot.sh
+chmod +x /mnt/installChroot.sh
 arch-chroot /mnt installChroot.sh
