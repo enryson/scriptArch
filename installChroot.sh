@@ -1,7 +1,6 @@
 echo "Script numero 2"
 pacman -Syy
-pacman -S reflector --noconfirm
-reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
 
