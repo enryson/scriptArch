@@ -27,7 +27,3 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S dhcpcd --noconfirm
 systemctl start dhcpcd
 systemctl enable dhcpcd
-
-pacman -S git nano --noconfirm
-
-git clone https://github.com/enryson/scriptArch.git
