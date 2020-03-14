@@ -47,6 +47,8 @@ cp /scriptArch/files/postInstall.sh /usr/bin/postInstall.sh
 sudo chmod 755 /usr/bin/postInstall.sh
 cp /scriptArch/files/afterInstall.service /etc/systemd/system/afterInstall.service
 sudo systemctl enable myscript.service
+clear
+
 echo "Reiniciando"
 umount /dev/sda1
 umount /dev/sda3
