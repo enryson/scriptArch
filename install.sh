@@ -12,6 +12,8 @@ mount /dev/sda3 /mnt
 
 pacman -Syy
 pacman -S reflector --noconfirm
+clear
+echo "Atualizando mirrors...."
 reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Syy
 
