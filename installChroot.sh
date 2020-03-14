@@ -52,4 +52,5 @@ clear
 echo "Reiniciando"
 umount /dev/sda1
 umount /dev/sda3
+exit 
 reboot
