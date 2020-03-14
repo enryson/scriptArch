@@ -25,10 +25,7 @@ cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 clear
 
 echo "Baixando novo Script"
-git clone https://github.com/enryson/scriptArch.git
-tar xvf scriptArch.*
-cd scriptArch
-
+wget https://raw.githubusercontent.com/enryson/scriptArch/master/installChroot.sh
 cp installChroot.sh /mnt
 chmod +x /mnt/installChroot.sh
 arch-chroot /mnt ./installChroot.sh

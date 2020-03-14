@@ -1,0 +1,8 @@
+[Unit]
+Description=MeuScript
+
+[Service]
+ExecStart=/usr/bin/postInstall
+
+[Install]
+WantedBy=multi-user.target 

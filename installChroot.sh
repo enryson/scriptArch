@@ -1,10 +1,14 @@
 echo "Script numero 2"
+delay 200
+clear
+echo "download script git"
+
+git clone https://github.com/enryson/scriptArch.git
 
 echo [multilib] >>  /etc/pacman.conf 
 echo Include = /etc/pacman.d/mirrorlist >> /etc/pacman.conf
 
 pacman -Syy
-
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
 
@@ -27,3 +31,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S dhcpcd --noconfirm
 systemctl start dhcpcd
 systemctl enable dhcpcd
+
+cp /scriptArch/files/postInstall.sh /usr/bin/postInstall.sh
+sudo chmod 755 /usr/bin/postInstall.sh
+
+cp /scriptArch/files/afterInstall.service /etc/systemd/system/afterInstall.service
+sudo systemctl enable myscript.service
