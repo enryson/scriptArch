@@ -8,7 +8,8 @@ mkfs.fat -F32 /dev/sda1
 delay 4000
 clear
 
-echo "Montando Sistema"
+echo "Montando Sistema"`
+mkdir /mnt/boot
 mkdir /mnt/boot/EFI
 mount /dev/sda1 /mnt/boot/EFI
 mount /dev/sda3 /mnt
