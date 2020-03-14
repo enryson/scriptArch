@@ -1,10 +1,6 @@
 echo "Script numero 2"
 delay 200
 clear
-echo "download script git"
-
-git clone https://github.com/enryson/scriptArch.git
-tar xvf scriptArch.*
 
 echo [multilib] >>  /etc/pacman.conf 
 echo Include = /etc/pacman.d/mirrorlist >> /etc/pacman.conf
@@ -32,6 +28,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S dhcpcd --noconfirm
 systemctl start dhcpcd
 systemctl enable dhcpcd
+
+echo "download script git"
+pacman -S git --noconfirm
+git clone https://github.com/enryson/scriptArch.git
+tar xvf scriptArch.*
 
 cp /scriptArch/files/postInstall.sh /usr/bin/postInstall.sh
 sudo chmod 755 /usr/bin/postInstall.sh

@@ -13,7 +13,7 @@ mount /dev/sda3 /mnt
 
 echo "Baixando Reflector"
 pacman -Syy
-pacman -S reflector --noconfirm
+pacman -S reflector git --noconfirm
 clear
 echo "Atualizando mirrors...."
 reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
