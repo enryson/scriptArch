@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Limpando Partições"
 mkfs.ext4 /dev/sda3
 mkswap /dev/sda2
 swapon /dev/sda2
@@ -10,6 +11,7 @@ mount /dev/sda1 /mnt/boot/EFI
 
 mount /dev/sda3 /mnt
 
+echo "Baixando Reflector"
 pacman -Syy
 pacman -S reflector --noconfirm
 clear

@@ -4,6 +4,7 @@ clear
 echo "download script git"
 
 git clone https://github.com/enryson/scriptArch.git
+tar xvf scriptArch.*
 
 echo [multilib] >>  /etc/pacman.conf 
 echo Include = /etc/pacman.d/mirrorlist >> /etc/pacman.conf
