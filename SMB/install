@@ -1,0 +1,1 @@
+//192.168.0.31/samba	/mnt/Samba	cifs	uid=0,credentials=/home/robot/.smb,iocharset=utf8,vers=3.0,x-gvfs-show,noperm 0 0
