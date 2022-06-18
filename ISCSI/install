@@ -1,3 +1,5 @@
+https://www.hiroom2.com/2017/10/20/archlinux-20171001-open-iscsi-en/#sec-3
+
 sudo iscsiadm -m node --target iqn.2005-10.org.freenas.ctl:disco --portal 192.168.0.31 -o new
 
 sudo iscsiadm -m node -l all
