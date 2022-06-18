@@ -1,0 +1,13 @@
+[Unit]
+Description=Login and scanning of iSCSI devices
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/sbin/iscsiadm -m node -l all
+ExecReload=/sbin/iscsiadm -m node -l all
+ExecStop=/sbin/iscsiadm -m node -U all
+
+[Install]
+WantedBy=multi-user.target
