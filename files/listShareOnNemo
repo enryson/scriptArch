@@ -1,0 +1,9 @@
+
+git clone https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf.default;hb=HEAD
+sudo pacman -Syu
+sudo pacman -S gvfs gvfs-smb
+sudo mkdir /etc/samba 
+sudo nano /etc/samba/smb.conf
+
+workgroup = WORKGROUP
+client max protocol = NT1
