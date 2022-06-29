@@ -11,8 +11,8 @@ efibootmgr -t 0
 
 
 #Install Software
-pacman -Syy lib32-nvidia-utils lutris steam nvidia-settings ntfs-3g
-paru -S --noconfirm python-pip pcsx2 rpcs3 
+pacman -Syy lib32-nvidia-utils lutris steam nvidia-settings ntfs-3g bluez bluez-utils
+paru -S --noconfirm python-pip pcsx2 rpcs3 webapp-manager
 opencl-nvidia opencl-nvidia xpadneo-dkms ttf-ms-fonts protonup-qt
 yaru-gtk-theme yaru-icon-theme yaru-gnome-shell-theme octopi heroic-games-launcher-bin minecraft-launcher stremio chrome-gnome-shell gdm-settings github-desktop 
 
@@ -26,9 +26,15 @@ source ~/.bashrc
 mkdir /etc/samba
 cp config/* /etc/
 
+cp boot/loader.conf /boot/loader/loader.conf
+cp config/main.conf /etc/bluetooth/main.conf
+
 systemctl enable avahi-daemon.service
 systemctl start avahi-daemon.service
 systemctl restart avahi-daemon.service
+
+systemctl enable bluetooth
+systemctl start bluetooth
 
 systemctl enable winbind
 systemctl enable smb
