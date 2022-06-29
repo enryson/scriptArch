@@ -67,7 +67,7 @@ gvfs-mtp
 gvfs-nfs
 gvfs-smb
 gzip
-heroic-games-launcher-bin
+
 hspell
 htop
 hunspell
@@ -78,12 +78,12 @@ libvoikko
 linux-firmware
 linux-zen
 linux-zen-headers
-lutris
+
 lynx
 m4
 make
 malcontent
-minecraft-launcher
+
 mutter
 nano
 nautilus
@@ -94,7 +94,7 @@ netstat-nat
 network-manager-applet
 networkmanager
 nmap
-ntfs-3g
+
 nuspell
 nvidia-dkms
 nvidia-settings

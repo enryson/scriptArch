@@ -1,0 +1,48 @@
+{
+    "config_version": "2.5.0",
+    "debug": false,
+    "desktop-environment": "gnome",
+    "gfx_driver": "Nvidia (proprietary)",
+    "harddrives": [
+        "/dev/nvme0n1"
+    ],
+    "kernels": [
+        "linux-zen"
+    ],
+    "mount_point": null,
+    "nic": {
+        "dhcp": true,
+        "dns": null,
+        "gateway": null,
+        "iface": null,
+        "ip": null,
+        "type": "nm"
+    },
+    "packages": [
+        "nemo",
+        "nemo-share",
+        "nano",
+        "firefox",
+        "code",
+        "git",
+        "code",
+        "base-devel",
+        "cifs-utils",
+        "nss-mdns",
+        "gvfs-smb",
+        "nemo",
+        "nemo-share",
+        "ntfs-3g",
+        "vlc",
+        "dconf",
+        "dconf-editor",
+        "samba"
+    ],
+    "plugin": null,
+    "profile": {
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/desktop.py"
+    },
+    "script": "guided",
+    "silent": false,
+    "version": "2.5.0"
+}
