@@ -43,7 +43,9 @@ systemctl start winbind
 systemctl start smb
 systemctl start nmb
 
-
 wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
 chmod +x gnome-shell-extension-installer
 mv gnome-shell-extension-installer /usr/bin/
+
+wget https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip
+cp firacode/ttf/* /usr/share/fonts
