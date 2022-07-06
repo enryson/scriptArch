@@ -117,3 +117,5 @@ done
 
 # Try to keep environment pollution down, EPA loves us.
 unset use_color sh
+
+export PATH=$PATH:$HOME/.local/bin
