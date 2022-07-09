@@ -11,7 +11,7 @@ efibootmgr -t 0
 
 
 #Install Software
-pacman -Syy lib32-nvidia-utils lutris steam nvidia-settings ntfs-3g bluez bluez-utils
+pacman -Syy lib32-nvidia-utils lutris steam nvidia-settings ntfs-3g bluez bluez-utils xinput
 paru -S --noconfirm python-pip pcsx2 rpcs3 webapp-manager
 opencl-nvidia opencl-nvidia xpadneo-dkms ttf-ms-fonts protonup-qt
 yaru-gtk-theme yaru-icon-theme yaru-gnome-shell-theme octopi heroic-games-launcher-bin minecraft-launcher stremio chrome-gnome-shell gdm-settings github-desktop 
