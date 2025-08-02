@@ -44,8 +44,9 @@ systemctl start smb
 systemctl start nmb
 
 echo 'blacklist intel_ish_ipc' >> /etc/modprobe.d/blacklist-ish.conf
+cp ./scripts/grub-remove-loading-msg.sh /usr/local/bin/grub-remove-loading-msg.sh
 
-
+cp ./files/grub.hook /usr/share/libalpm/hooks/grub.hook
 
 wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
 chmod +x gnome-shell-extension-installer
