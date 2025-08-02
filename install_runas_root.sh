@@ -43,6 +43,10 @@ systemctl start winbind
 systemctl start smb
 systemctl start nmb
 
+echo 'blacklist intel_ish_ipc' >> /etc/modprobe.d/blacklist-ish.conf
+
+
+
 wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
 chmod +x gnome-shell-extension-installer
 mv gnome-shell-extension-installer /usr/bin/
