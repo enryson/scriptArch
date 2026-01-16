@@ -17,10 +17,3 @@ dconf write /org/gnome/desktop/wm/keybindings/switch-applications-backward "['']
 #gentoobashrc
 cp bashrc/bashrc ~/.bashrc
 source ~/.bashrc
-
-gnome-shell-extension-installer 1160
-gnome-shell-extension-installer 2890
-gnome-shell-extension-installer 751
-gnome-shell-extension-installer 19
-gnome-shell-extension-installer 1401
-gnome-shell-extension-installer 1112
